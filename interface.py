@@ -3,7 +3,7 @@
 import tkinter
 from tkinter import *
 import engToBraille
-
+import os
 
 # window
 w = tkinter.Tk()
@@ -20,10 +20,7 @@ inEntry.pack()
 
 # function to run when input text is ready
 def submitInput ():
-    braille = engToBraille.translate(inEntry.get())
-    for b in braille:
-        print(b)
-    # subprocess.call("blender --background --python myscript.py")
+    os.system("blender --background  Miki.blend --python blend.py -- " + inEntry.get())
     outButton['state'] = NORMAL
 
 # function that reacts to 'return' key
