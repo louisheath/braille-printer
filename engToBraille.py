@@ -53,7 +53,7 @@ def isCapital ( char ):
     return False
 
 
-def engToBraille ( string ):
+def translate ( string ):
     # List which will contain braille in form of lists
     sentence = []
 
@@ -71,15 +71,3 @@ def engToBraille ( string ):
             count = count + 1
 
     return sentence
-
-
-
-def main():
-    test = engToBraille("Hello")
-    for t in test:
-        print(t)
-
-    subprocess.call("atom")
-    # subprocess.call("blender --background --python myscript.py")
-
-main()
