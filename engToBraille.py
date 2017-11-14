@@ -1,3 +1,5 @@
+import subprocess # allows us to make terminal command calls
+
 braille = ([
     [1, 0, 0, 0, 0, 0], # 00: a
     [1, 0, 1, 0, 0, 0], # 01: b
@@ -68,8 +70,6 @@ def engToBraille ( string ):
                 break
             count = count + 1
 
-    # trim white space from end
-
     return sentence
 
 
@@ -78,5 +78,8 @@ def main():
     test = engToBraille("Hello")
     for t in test:
         print(t)
+
+    subprocess.call("atom")
+    # subprocess.call("blender --background --python myscript.py")
 
 main()
