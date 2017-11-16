@@ -8,8 +8,14 @@ Developed in Python using Tkinter and Blender by Louis Heath, Muntazim Ali, [Mik
 
 ### Running
 
-To run braille-printer you must have python3 and blender installed. 
+To run braille-printer you must have python3 and blender installed.
 
-On Mac, use command `python3 interface.py` in the terminal which start the GUI.
+Type `python3 interface.py` in your terminal to get it started.
 
-`interface.py` runs the terminal command `blender --background --python blend.py -- <arg>`, so an alias may be necessary for `blender` on some machines.
+We didn't encounter any problems running braille-printer on Ubuntu, however on Mac you'll likely want to change the alias for blender, which by default is hard-coded as `blender`
+
+1. Navigate to your blender installation folder (perhaps in "Applications")
+2. Right click on the blender app and select "Show Package Contents"
+3. Burrow down to Contents->MacOS->blender
+4. Copy the file path of the blender executable
+5. Paste it in-between the quote marks on line 8 of `blender.py`
