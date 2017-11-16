@@ -1,6 +1,5 @@
 import tkinter
 from tkinter import *
-import engToBraille
 import os
 
 # Edit this to the path of your blender package (more info in README.md)
